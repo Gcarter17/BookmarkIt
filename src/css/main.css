@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h3 {
+  color: teal !important;
+  font-size: 34px;
+}
+
+.prettyText {
+  text-transform: capitalize;
+  font-family: 'Lilita One', cursive;
+  font-weight: 350;
+  margin: 0;
+  color: white;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.inactive {
+  display: none !important;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropBtn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  user-select: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+.itemCheckBox {
+  position: absolute;
+  right: 0;
+  height: 30px;
+  width: 26px;
+  border: 1px solid black;
+}
+
+/* Main content */
+.main {
+  margin-left: 220px;
+  /* Same as the width of the sidenav */
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 600px), (max-width: 450px) {
+  .sidenav {
+    padding-top: 15px;
+    width: 130px;
+    /* display: none; */
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+  .main {
+    margin: 0;
+  }
+}
+
+.card {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin: .5rem;
+  width: 250px;
+  height: 300px;
+}
+
+.card:hover {
+  transition: all .8s;
+}
+
+.card:hover .card-front {
+  transform: rotateY(180deg) scale(1.05);
+}
+
+.card:hover .card-back {
+  z-index: 950;
+  transform: translateY(24px) rotateY(0deg) scale(1.25);
+  border: 2px solid white;
+}
+
+.card-face {
+  display: flex;
+  flex-direction: column;
+  transition: all .6s ease-out;
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: .5rem;
+  height: 100%;
+  width: 100%;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #595959;
+}
+
+.card-back {
+  transform: rotateY(-180deg);
+  height: 250px;
+}
+
+.card-front {
+  transform: rotateY(0deg);
+}
+
+.card-title {
+  order: 1;
+}
+
+.card-name {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-Img {
+  filter: brightness(45%);
+  border-width: .25rem;
+  border-radius: .5rem;
+  margin: 25px;
+  width: 200px;
+  height: 200px;
+}
+
+.card-description {
+  align-content: flex-start;
+  padding: 10px;
+  font-size: 20px;
+  color: #D3D3D3;
+}
+
+.card-mini-description {
+  z-index: 1000;
+  position: absolute;
+  top: 10%;
+  margin: 0 25px 0 25px;
+  font-family: Arial ,sans-serif;
+  color: transparent;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-size: 22px;
+  font-weight: 800;
+}
+/*# sourceMappingURL=main.css.map */
